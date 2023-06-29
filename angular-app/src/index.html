@@ -1,112 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-	<link rel="icon" href="https://play-lh.googleusercontent.com/HU2oT_pYCfcNC3-kT-6OSJi4OfE9jQ86zaxu0IB6PZ8mRzbZMGeCSNvcRkdNfBjUqQ=w240-h480-rw" type="image/icon type">
-    <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.42288"/>
-    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.42288" />
-    <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42288" />
-    <style type="text/css" id="form-designer-style"></style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="html2pdf.bundle.min.js"></script>
-    <title>Customer Satisfaction Survey Form</title>
-    <style type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="icon" href="https://play-lh.googleusercontent.com/HU2oT_pYCfcNC3-kT-6OSJi4OfE9jQ86zaxu0IB6PZ8mRzbZMGeCSNvcRkdNfBjUqQ=w240-h480-rw" type="image/icon type">
+  <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+  <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.42288"/>
+  <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.42288" />
+  <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42288" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <style type="text/css" id="form-designer-style"></style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+  <title>Customer Satisfaction Survey</title>
+  <style type="text/css">
 
-        div.form-html{
+      div.form-html{
             display: grid;
-			grid-template-columns: 1fr 0.5fr;
-			padding-bottom: 2rem;
+            grid-template-columns: 1fr 0.5fr;
+            padding-bottom: 2rem;
         }
 
-        input,select,textarea {
-			border: 1.8px solid #333;
-			background-color: white;
-			border-radius: 0.35rem;
-		}	
+      input,select,textarea {
+          border: 1.8px solid #333;
+          background-color: white;
+          border-radius: 0.35rem;
+		    }	
 				
-		input[type="text"],input[type="date"],select,textarea {
-			font-size: 0.9em;
-			font-family: sans-serif;
-			display: block;
-			box-sizing: border-box;
-			width: 100%;
-			padding: 0.5rem 0.75rem;
-			padding-top: 0.9rem;
-		}
-      .question{
-            display: justify;
+      input[type="text"],input[type="date"],select,textarea {
+        font-size: 0.9em;
+        font-family: sans-serif;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        padding-top: 0.9rem;
+      }
+        .question{
+              display: inline-block;
+          }
+      p.q{
+        position: absolute;
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+      }
+      div.rating-item-group{
+        padding-left: 5rem;
+      }
+      p.footer{
+        padding-left: 15rem;
+        padding-top: 10rem;
+        font-size: xx-small;
+      }
+
+    
+      button{
+        background-image: linear-gradient(-180deg, #43a4cd 0%, #2786ae 100%);
+        border-radius: 0%;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        position: inherit;
+        margin: 0;
+        font-size: 10px;
+        padding: 1rem 1.75rem;
+        text-decoration: none;
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .button-43:hover {
+        background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+      }
+      .drop{
+        font-weight:300;
+      }
+      @media (min-width: 768px) {
+        .button-43 {
+          padding: 1rem 2rem;
         }
-    p.q{
-      position: absolute;
-      padding-top: 2rem;
-      padding-bottom: 2.5rem;
-    }
-    div.rating-item-group{
-      padding-left: 5rem;
-    }
-    p.footer{
-      padding-left: 15rem;
-      padding-top: 10rem;
-      font-size: xx-small;
-    }
+      }
+      #cid_240{
+        display: inline-block;
+        padding-left: 5rem;
+      }
+      form {
+        
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        
+      }
 
-/* CSS */
-button{
-  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
-  padding-bottom: 2rem;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  position: relative;
-  font-size: 16px;
-  text-align: center;
-  padding: 1rem 1.75rem;
-  text-decoration: none;
-  width: 100%;
-  border: 0;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-43:hover {
-  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
-}
-.drop{
-	text-align: right;
-}
-@media (min-width: 768px) {
-  .button-43 {
-    padding: 1rem 2rem;
-  }
-}
-#cid_240{
-  display: inline-block;
-  padding-left: 5rem;
-}
-form {
-  
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
-  
- form[size="A4"] {  
-	width: 25cm;
-	height: 30cm;
-	text-align: center;
-}
-
-
-    </style>
+  </style>
 </head>
 <body>
-    <form size="A4" > 
+    <form action="mail.php" method="POST"> 
      
     <div role="main" class="form-all">
 	
@@ -114,8 +105,17 @@ form {
           <li class="form-line" data-type="control_text" id="id_1">
             <div id="cid_1" class="form-input-wide" data-layout="full">
               <div id="text_1" class="form-html" data-component="text" tabindex="0">
-                <p style="text-align: left;"><img src="https://www.tuv.com/system-media-files/img/logo_en_transparent_svg.svg" alt="img" width="270"></p>
-                <h4 class="heading" style="text-align: right;"><span style="font-size: 13pt;"><strong><span style="color: #000000;">Post Inspection</span> </strong><strong><span style="color: #000000;"><br />Customer </span></strong><strong><span style="color: #000000;">Satisfaction </span></strong><strong><span style="color: #000000;">Questionnaire</span></strong></span></h4>
+                <p style="text-align: left;">
+                  <img src="https://www.tuv.com/system-media-files/img/logo_en_transparent_svg.svg" alt="img" width="270">
+                </p>
+                <h4 class="heading" style="text-align: right;">
+                  <span style="font-size: 13pt;"><strong>
+                  <span style="color: #000000;">Post Inspection</span></strong>
+                  <strong><span style="color: #000000;"><br />Customer </span></strong>
+                  <strong><span style="color: #000000;">Satisfaction </span></strong>
+                  <strong><span style="color: #000000;">Questionnaire</span></strong>
+                  </span>
+                /h4>
               </div>
             </div>
           </li>
@@ -123,7 +123,7 @@ form {
             <div class="form-header-group  header-default">
               <div class="header-text httal htvam">
                 <h2 id="header_2" class="form-header" data-component="header">Company:</h2>
-                <input id="name" type="text" placeholder="Company" name="team" required />
+                <input id="name" type="text" placeholder="Company" name="cname" required />
               </div>
             </div>
           </li>
@@ -131,7 +131,7 @@ form {
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_11" class="form-header" data-component="header">Name of company representative:</h3>
-                <input id="name" type="text" placeholder="Company Repsentative" name="team" required /> 
+                <input id="pname" type="text" placeholder="Company Repsentative" name="team" required /> 
             </div>
             </div>
           </li>
@@ -139,7 +139,7 @@ form {
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_3" class="form-header" data-component="header">Inspection Date:</h3>
-                <input id="date" type="date" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31">
+                <input id="date" type="date" name="datetime" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31">
               </div>
             </div>
           </li>
@@ -147,24 +147,35 @@ form {
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_4" class="form-header" data-component="header">Type of Inspection: </h3>
-				<select name="typeinspection" id="inspection" placeholder="Type of Inspection" required>
-				  <option value="select ype" placeholder="Type of Inspection">Choose The Type Of Inspection<span class="drop">&#9660;</span></option>
-				  <option value="per conformity">PER Conformity assessment</option>
-				  <option value="pre-commissiong">Pre-Commissioning Inspection on pressure equipment</option>
-				  <option value="Statutory">Statutory inspection of Pressure Equipment</option>
-				  <option value="Annual">Annual Inspection on pressure equipment advice</option>
-				</select>
-              </div>
+                <select name="typeinspection" class="drop" id="inspection" placeholder="Type of Inspection" required>
+                  <option value="select type" aria-placeholder="Type of Inspection"></option>
+                  <option value="per conformity">PER Conformity assessment</option>
+                  <option value="pre-commissiong">Pre-Commissioning Inspection on pressure equipment</option>
+                  <option value="Statutory">Statutory inspection of Pressure Equipment</option>
+                  <option value="Annual">Annual Inspection on pressure equipment advice</option>
+                </select>
+            </div>
             </div>
           </li>
+
           <li id="cid_5" class="form-input-wide" data-type="control_head">
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_5" class="form-header" data-component="header">Inspection Team: </h3>
-                <input id="name" type="text" placeholder="Inspection Team" name="team" required />
+                <select name="inspectionteam" class="drop" id="team" placeholder="Inspection Team" required>
+                  <option value="select type" placeholder="Choose An Inspection Team"></option>
+                  <option value="Sandton">Sandton</option>
+                  <option value="CapeTown">Cape Town</option>
+                  <option value="Secunda">Secunda</option>
+                  <option value="Kusile">Kusile</option>
+                  <option value="Medupi">Medupi</option>
+                  <option value="Durban">Durban</option>
+                  <option value="Gqeberha">Gqeberha</option>
+                </select>
               </div>
             </div>
           </li>
+
           <li class="form-line" data-type="control_text" id="id_6">
             <div id="cid_6" class="form-input-wide" data-layout="full">
               <div id="text_6" class="form-html" data-component="text" tabindex="0">
@@ -173,6 +184,8 @@ form {
               </div>
             </div>
           </li>
+
+         
           <li class="form-line jf-required" data-type="control_scale" id="id_22"><label class="form-label form-label-left form-label-auto" id="label_22" for="input_22"> 1. How would you rate your experience with Sales/ Quotations?<span class="form-required">*</span> </label>
             <div id="cid_22" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_22 sublabel_input_22_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
@@ -184,8 +197,10 @@ form {
                     <div class="rating-item"><span class="rating-item-title for-to"><label for="input_22_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="5" title="5" id="input_22_5" required="" /><label for="input_22_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_22_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
-              </span> </div>
+              </span> 
+            </div>
           </li>
+
           <li class="form-line jf-required" data-type="control_scale" id="id_17"><label class="form-label form-label-left form-label-auto" id="label_17" for="input_17"> 2. Were you satisfied with the planning of the inspection?<span class="form-required">*</span> </label>
             <div id="cid_17" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_17 sublabel_input_17_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
@@ -197,8 +212,10 @@ form {
                     <div class="rating-item"><span class="rating-item-title for-to"><label for="input_17_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="5" title="5" id="input_17_5" required="" /><label for="input_17_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_17_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
-              </span> </div>
+              </span> 
+            </div>
           </li>
+
           <li class="form-line jf-required" data-type="control_scale" id="id_18"><label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> 3. Were you satisfied with the inspection team and how the inspection was conducted?<span class="form-required">*</span> </label>
             <div id="cid_18" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_18 sublabel_input_18_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
@@ -210,8 +227,10 @@ form {
                     <div class="rating-item"><span class="rating-item-title for-to"><label for="input_18_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="5" title="5" id="input_18_5" required="" /><label for="input_18_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_18_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
-              </span> </div>
+              </span> 
+            </div>
           </li>
+
           <li class="form-line jf-required" data-type="control_scale" id="id_19"><label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> 4. How was your experience with inspection report issuance? Were you satisfied with invoicing?<span class="form-required">*</span> </label>
             <div id="cid_19" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_19 sublabel_input_19_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
@@ -223,7 +242,8 @@ form {
                     <div class="rating-item"><span class="rating-item-title for-to"><label for="input_19_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="5" title="5" id="input_19_5" required="" /><label for="input_19_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_19_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
-              </span> </div>
+              </span> 
+            </div>
           </li>
           
           <li class="form-line jf-required" data-type="control_scale" id="id_21"><label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> 5. Inspector's overall performance with respect to QHSE(Quality, Health, Safety &amp; Environment)<span class="form-required">*</span> </label>
@@ -237,7 +257,8 @@ form {
                     <div class="rating-item"><span class="rating-item-title for-to"><label for="input_21_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="5" title="5" id="input_21_5" required="" /><label for="input_21_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_21_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
-              </span> </div>
+              </span> 
+            </div>
           </li>
           <li class="form-line" data-type="control_radio" id="id_24"><label class="form-label form-label-left form-label-auto" id="label_24" for="input_24"><strong> Review</strong> </label>
             <div id="cid_240" class="form-input" data-layout="full">
@@ -265,34 +286,42 @@ form {
               <div data-wrapper-react="true">
                 <div style="display:none">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                        <input type="tel" class="form-textbox validate[limitDate]" id="month_30" name="q30_date[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_30" id="sublabel_30_month" style="min-height:13px" aria-hidden="false">Month</label></span>
+                        <input type="tel" class="form-textbox validate[limitDate]" id="month_30" name="q30_date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_month" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="month_30" id="sublabel_30_month" style="min-height:13px" aria-hidden="false">Month</label></span>
                         <span class="form-sub-label-container" style="vertical-align:top">
-                            <input type="tel" class="form-textbox validate[limitDate]" id="day_30" name="q30_date[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_30" id="sublabel_30_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_30" name="q30_date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_year" /><label class="form-sub-label" for="year_30" id="sublabel_30_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="tel" class="form-textbox validate[limitDate]" id="day_30" name="q30_date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_day" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="day_30" id="sublabel_30_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top">
+                              <input type="tel" class="form-textbox validate[limitDate]" id="year_30" name="q30_date" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_year" /><label class="form-sub-label" for="year_30" id="sublabel_30_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
                                 <input id="date" type="date" value="yyyy-mm-dd"min="2023-06-31" max="2025-12-31">
-                    <img class="showAutoCalendar newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_30_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_30" id="sublabel_30_litemode" style="min-height:13px" aria-hidden="false">Date</label></span>
               </div>
             </div>
           </li>
-          <li><button type="submit" onclick="GeneratePdf('form-all')" name="Submit">Submit</button></li>
-          <li class="form-line" data-type="control_text" id="id_13">
-            <div id="cid_13" class="form-input-wide" data-layout="full">
-              <div id="text_13" class="form-html" data-component="text" tabindex="0">
-                <p style="text-align: justify;"> </p>
-                <p style="text-align: center;">  </p>
-                <p class="footer" style="text-align: center;" style="font-size: 0.5pt;"><span style="color: #000000;">TÜV Rheinland South Africa Tel. +2712 657 7700, Fax +2712 667 1343,   mail:feedback@za.tuv.com Document number: MS-0045816</span></p>
+          <li><button  onclick=" " name="Submit">Submit</button></li>
+          <li><button type="submit">Preview</button></li>
+          <li>
+              <div style="text-align: center;">
+                <p style="text-align: center;"></p>
+                <p class="footer" style="text-align: center;" style="font-size: 0.5pt;">
+                <span style="color: #000000; text-align: center;">TÜV Rheinland South Africa Tel. +2712 657 7700, Fax +2712 667 1343, mail:feedback@za.tuv.com Document number: MS-0045816
+                </span>
+                </p>
               </div>
-            </div>
+            
           </li>
          
         </ul>
       </div>
     </form>
-
     <script>
+        function storeUsername(){
+          var usernameInput = document.getElementById("username").value;
+          localStorage.setItem("username",usernameInput)
+          return true;
+        }
+    </script>
+    
 			
-				
-        var Calendar = Class.create();
-        Calendar.VERSION = '1.2';
+	<script>		
+      var Calendar = Class.create();
+      Calendar.VERSION = '1.2';
 
 Calendar.DAY_NAMES = [
   'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
@@ -325,10 +354,6 @@ Calendar.NAV_TODAY          =  0;
 Calendar.NAV_NEXT_MONTH     =  1;
 Calendar.NAV_NEXT_YEAR      =  2;
 
-//------------------------------------------------------------------------------
-// Static Methods
-//------------------------------------------------------------------------------
-
 // This gets called when the user presses a mouse button anywhere in the
 // document, if the calendar is shown. If the click was outside the open
 // calendar this function closes it.
@@ -356,10 +381,6 @@ Calendar._checkCalendar = function(event) {
   window._popupCalendar.callCloseHandler();
   return Event.stop(event);
 };
-
-//------------------------------------------------------------------------------
-// Event Handlers
-//------------------------------------------------------------------------------
 
 Calendar.handleMouseDownEvent = function(event)
 {
@@ -508,25 +529,7 @@ Calendar.handleMouseUpEvent = function(event)
 			  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 			};
 
-			// New Promise-based usage:
-			html2pdf().set(opt).from(element).save();
-
-			// Old monolithic-style usage:
-			html2pdf(element, opt);
-
-        // Avoid page-breaks on all elements, and add one before #page2el.
-		html2pdf().set({
-		  pagebreak: { mode: 'avoid-all', before: '#page2el' }
-		})
-		// Enable all 'modes', with no explicit elements.
-		html2pdf().set({
-		  pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-		});
-
-		// No modes, only explicit elements.
-		html2pdf().set({
-		  pagebreak: { before: '.beforeClass', after: ['#after1', '#after2'], avoid: 'img' }
-		});
+	
     </script>
     <script src="es6-promise.auto.min.js"></script>
 	<script src="jspdf.min.js"></script>
