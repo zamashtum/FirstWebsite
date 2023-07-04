@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted</title>
+	 <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  <script src="index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("J01QMSmqj93QY8gmJ");
+      });
+    </script>
+	<style>
+		body {
+		  background-image: url(https://karriereblog.tuv.com/wp-content/uploads/2020/02/TUEV-Rheinland-Fav.png);
+		  background-blend-mode: normal;
+      background-attachment:inherit;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: 20%;
+      text-align: center;
+		}
+
+  
+    button{
+      background-image: linear-gradient(-180deg, #0083bb 0%, #0083bb 100%);
+      border-radius: 0%;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      position: relative;
+      font-size: 20px;
+      padding: 1rem 1.75rem;
+      text-decoration: none;
+      width: 40%;
+      border: 0;
+      cursor: pointer;
+    }
+    
+  .msg{
+      position: absolute;
+      padding-bottom: 500px;
+    }
+
+  .survey-iframe{
+      height: calc(100vh - 90px) !important;
+      width: 100% !important;
+    }
+  .form-section{
+      height: calc(100vh - 90px);
+      width: 100%;
+    }
+      
+
+  iframe.survey-iframe {
+      display: block;
+      border: none;         /* Reset default border */
+      height: 100vh;        /* Viewport-relative units */
+      width: calc(100% + 17px);
+    }
+
+  iframe{
+    float:left; clear:both;
+  }
+
+  div {
+    overflow-x: hidden;
+  }
+	</style>
+</head>
+<body>
+  
+    
+    
+  <div>
+      <iframe class="survey-iframe"src="index.html"  title="Customer satisfaction form" id="frame"></iframe>
+     
+    </div>
+    <div id="sub">
+      <button class="btn-3" onclick="printWindow()">Print</button>
+      <button id="btn-2" onclick="send()">Submit</button>
+    </div>
+  </div>  
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  Email.send({
+  Host : "smtp.elasticemail.com",
+  Username : "username",
+  Password : "password",
+  To : 'them@website.com',
+  From : "you@isp.com",
+  Subject : "This is the subject",
+  Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+</script>
+<script>
+function getFrameContents() {
+  var iFrame = document.getElementById('frame');
+  var iFrameBody;
+  if (iFrame.contentDocument) { // FF
+  iFrameBody = iFrame.contentDocument.getElementsByTagName('body')[0];
+  } else if (iFrame.contentWindow) { // IE
+  iFrameBody = iFrame.contentWindow.document.getElementsByTagName('body')[0];
+  }
+  alert(iFrameBody.innerHTML);
+  return iFrameBody.innerHTML
+  }
+ document.getElementById('frame').onclick = setTimeout( printWindow, 800 );
+
+ function ressizeIframe(frame){
+  obj.style.height = frame.contentWindow.document.documentElement.scrollHeight + 'px';
+ }
+
+  //implemented in the HTML that is loaded in 'frame'
+ function printWindow()
+  {
+  window.print('form-section page-section');
+ }
+</script>  
+</html>

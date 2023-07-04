@@ -6,29 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="icon" href="https://play-lh.googleusercontent.com/HU2oT_pYCfcNC3-kT-6OSJi4OfE9jQ86zaxu0IB6PZ8mRzbZMGeCSNvcRkdNfBjUqQ=w240-h480-rw" type="image/icon type">
-  <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+  <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height: 100% !important}.page-section{position:initial!important}}</style>
   <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.42288"/>
   <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.42288" />
   <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42288" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <style type="text/css" id="form-designer-style"></style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="html2pdf.bundle.min.js"></script>
+  
+  <script type="TUV/submit.js"></script>
   <title>Customer Satisfaction Survey</title>
   <style type="text/css">
 
+      div.form-all{
+        width: 2480px;
+        height: 2480px;
+      }
+      .form-section{
+        height: 100vh 90px;
+        width: 670px;
+      }
+
       div.form-html{
-            display: grid;
-            grid-template-columns: 1fr 0.5fr;
-            padding-bottom: 2rem;
-        }
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1.5rem;
+      }
 
       input,select,textarea {
           border: 1.8px solid #333;
           background-color: white;
           border-radius: 0.35rem;
 		    }	
-				
+      
+        
+      h4{
+        display: inline-block;
+        padding-top: 1rem;
+       
+      }		
       input[type="text"],input[type="date"],select,textarea {
         font-size: 0.9em;
         font-family: sans-serif;
@@ -44,29 +60,65 @@
       p.q{
         position: absolute;
         padding-top: 1rem;
-        padding-bottom: 2.5rem;
+        padding-bottom: 2rem;
+      }
+      .quiz{
+        display: flex;
+
       }
       div.rating-item-group{
         padding-left: 5rem;
       }
       p.footer{
-        padding-left: 15rem;
-        padding-top: 10rem;
+        margin-top: 9px;
+        margin-bottom: 9px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 240px;
+        padding-right: 240px;
+
         font-size: xx-small;
       }
+      select:required:invalid {
+          color: gray;
+        }
+        option[value=""][disabled] {
+          display: none;
+        }
+        option {
+          color: black;
+      }
 
+      li.form-input-wide{
+        margin-top: 20px;
+        margin-bottom: 2px;
+        width: 676px;
+        height: 100px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      li.form-line{
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 648px;
+        height: 100px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+      }
     
       button{
-        background-image: linear-gradient(-180deg, #43a4cd 0%, #2786ae 100%);
+        background-image: linear-gradient(-180deg, #0083bb 0%, #0083bb 100%);
         border-radius: 0%;
         box-sizing: border-box;
         color: #FFFFFF;
-        position: inherit;
+        position: relative;
+        display: center;
         margin: 0;
-        font-size: 10px;
+        font-size: 20px;
         padding: 1rem 1.75rem;
         text-decoration: none;
-        width: 100%;
+        width: 50%;
         border: 0;
         cursor: pointer;
       }
@@ -82,6 +134,10 @@
           padding: 1rem 2rem;
         }
       }
+      
+      #date:invalid{
+        color: gray;
+      }
       #cid_240{
         display: inline-block;
         padding-left: 5rem;
@@ -93,16 +149,20 @@
         margin-bottom: 0.5cm;
         
       }
+    #page{
+      width: 783px ;
+      height: 2480px;
+    }  
 
   </style>
 </head>
 <body>
-    <form action="mail.php" method="POST"> 
+    <form action=" " method="POST"> 
      
     <div role="main" class="form-all">
 	
         <ul class="form-section page-section" id="page">
-          <li class="form-line" data-type="control_text" id="id_1">
+          <li class="form-lineh1" data-type="control_text" id="id_1">
             <div id="cid_1" class="form-input-wide" data-layout="full">
               <div id="text_1" class="form-html" data-component="text" tabindex="0">
                 <p style="text-align: left;">
@@ -115,7 +175,7 @@
                   <strong><span style="color: #000000;">Satisfaction </span></strong>
                   <strong><span style="color: #000000;">Questionnaire</span></strong>
                   </span>
-                /h4>
+                </h4>
               </div>
             </div>
           </li>
@@ -127,7 +187,7 @@
               </div>
             </div>
           </li>
-		  <li id="cid_11" class="form-input-wide" data-type="control_head">
+		      <li id="cid_11" class="form-input-wide" data-type="control_head">
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_11" class="form-header" data-component="header">Name of company representative:</h3>
@@ -139,7 +199,7 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_3" class="form-header" data-component="header">Inspection Date:</h3>
-                <input id="date" type="date" name="datetime" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31">
+                <input id="date" type="date" name="datetime" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31" required>
               </div>
             </div>
           </li>
@@ -147,9 +207,8 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_4" class="form-header" data-component="header">Type of Inspection: </h3>
-                <select name="typeinspection" class="drop" id="inspection" placeholder="Type of Inspection" required>
-                  <option value="select type" aria-placeholder="Type of Inspection"></option>
-                  <option value="per conformity">PER Conformity assessment</option>
+                <select name="typeinspection" class="drop" id="inspection" required>
+                  <option value="" disabled selected>Select type of Inspection...</option>
                   <option value="pre-commissiong">Pre-Commissioning Inspection on pressure equipment</option>
                   <option value="Statutory">Statutory inspection of Pressure Equipment</option>
                   <option value="Annual">Annual Inspection on pressure equipment advice</option>
@@ -162,8 +221,8 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_5" class="form-header" data-component="header">Inspection Team: </h3>
-                <select name="inspectionteam" class="drop" id="team" placeholder="Inspection Team" required>
-                  <option value="select type" placeholder="Choose An Inspection Team"></option>
+                <select name="inspectionteam" class="drop" id="team" required>
+                  <option value="" disabled selected>Select Inspection Team...</option>
                   <option value="Sandton">Sandton</option>
                   <option value="CapeTown">Cape Town</option>
                   <option value="Secunda">Secunda</option>
@@ -180,13 +239,13 @@
             <div id="cid_6" class="form-input-wide" data-layout="full">
               <div id="text_6" class="form-html" data-component="text" tabindex="0">
                 <p class="question" style="text-align: vertical-align;"><strong><span style="font-size: 12pt;"><span style="color: #000000;">We value your feedback. How did we fare?</span></span></strong></p>
-                <p class="q"><strong><span style="font-size: 12pt;"><span style="color: #000000;">Please rate our service.</span></span></strong></p>
+                <p class="quiz"><strong><span style="font-size: 12pt;"><span style="color: #000000;">Please rate our service.</span></span></strong></p>
               </div>
             </div>
           </li>
 
          
-          <li class="form-line jf-required" data-type="control_scale" id="id_22"><label class="form-label form-label-left form-label-auto" id="label_22" for="input_22"> 1. How would you rate your experience with Sales/ Quotations?<span class="form-required">*</span> </label>
+          <li class="form-line" data-type="control_scale" id="id_22"><label class="form-label form-label-left form-label-auto" id="label_22" for="input_22"> 1. How would you rate your experience with Sales/ Quotations?<span class="form-required">*</span> </label>
             <div id="cid_22" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_22 sublabel_input_22_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
@@ -201,7 +260,7 @@
             </div>
           </li>
 
-          <li class="form-line jf-required" data-type="control_scale" id="id_17"><label class="form-label form-label-left form-label-auto" id="label_17" for="input_17"> 2. Were you satisfied with the planning of the inspection?<span class="form-required">*</span> </label>
+          <li class="form-line" data-type="control_scale" id="id_17"><label class="form-label form-label-left form-label-auto" id="label_17" for="input_17"> 2. Were you satisfied with the planning of the inspection?<span class="form-required">*</span> </label>
             <div id="cid_17" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_17 sublabel_input_17_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
@@ -216,7 +275,7 @@
             </div>
           </li>
 
-          <li class="form-line jf-required" data-type="control_scale" id="id_18"><label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> 3. Were you satisfied with the inspection team and how the inspection was conducted?<span class="form-required">*</span> </label>
+          <li class="form-line" data-type="control_scale" id="id_18"><label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> 3. Were you satisfied with the inspection team and how the inspection was conducted?<span class="form-required">*</span> </label>
             <div id="cid_18" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_18 sublabel_input_18_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
@@ -231,7 +290,7 @@
             </div>
           </li>
 
-          <li class="form-line jf-required" data-type="control_scale" id="id_19"><label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> 4. How was your experience with inspection report issuance? Were you satisfied with invoicing?<span class="form-required">*</span> </label>
+          <li class="form-line" data-type="control_scale" id="id_19"><label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> 4. How was your experience with inspection report issuance? Were you satisfied with invoicing?<span class="form-required">*</span> </label>
             <div id="cid_19" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_19 sublabel_input_19_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
@@ -246,7 +305,7 @@
             </div>
           </li>
           
-          <li class="form-line jf-required" data-type="control_scale" id="id_21"><label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> 5. Inspector's overall performance with respect to QHSE(Quality, Health, Safety &amp; Environment)<span class="form-required">*</span> </label>
+          <li class="form-line" data-type="control_scale" id="id_21"><label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> 5. Inspector's overall performance with respect to QHSE(Quality, Health, Safety &amp; Environment)<span class="form-required">*</span> </label>
             <div id="cid_21" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_21 sublabel_input_21_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
@@ -269,7 +328,7 @@
                 <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_1" name="q24_review" value="Partially Satisfied" />
                 <label id="label_input_24_1" for="input_24_1">Partially Satisfied</label></span>
                 <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_2" name="q24_review" value="Satisfied" />
+                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_2" name="q24_review" value="Satisfied" style="vertical-align:top"/>
                 <label id="label_input_24_2" for="input_24_2">Satisfied</label></span>
               </div>
             </div>
@@ -290,12 +349,11 @@
                         <span class="form-sub-label-container" style="vertical-align:top">
                             <input type="tel" class="form-textbox validate[limitDate]" id="day_30" name="q30_date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_day" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="day_30" id="sublabel_30_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top">
                               <input type="tel" class="form-textbox validate[limitDate]" id="year_30" name="q30_date" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_year" /><label class="form-sub-label" for="year_30" id="sublabel_30_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
-                                <input id="date" type="date" value="yyyy-mm-dd"min="2023-06-31" max="2025-12-31">
+                                <input id="date" type="date" value="yyyy-mm-dd"min="2023-06-31" max="2025-12-31" required>
               </div>
             </div>
           </li>
-          <li><button  onclick=" " name="Submit">Submit</button></li>
-          <li><button type="submit">Preview</button></li>
+          
           <li>
               <div style="text-align: center;">
                 <p style="text-align: center;"></p>
@@ -310,13 +368,8 @@
         </ul>
       </div>
     </form>
-    <script>
-        function storeUsername(){
-          var usernameInput = document.getElementById("username").value;
-          localStorage.setItem("username",usernameInput)
-          return true;
-        }
-    </script>
+   
+   
     
 			
 	<script>		
@@ -515,27 +568,14 @@ Calendar.handleMouseUpEvent = function(event)
 };
             
                              
-        // Function to GeneratePdf
-        function GeneratePdf() {
-            var element = document.getElementById('page');
-            html2pdf(element);
-        }
-		var element = document.getElementById('form-all');
-			var opt = {
-			  margin:       1,
-			  filename:     'Survey COmplete.pdf',
-			  image:        { type: 'jpeg', quality: 0.98 },
-			  html2canvas:  { scale: 2 },
-			  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-			};
-
 	
     </script>
     <script src="es6-promise.auto.min.js"></script>
 	<script src="jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="printThis.js"></script>
+  <script src="TUV/custom.js"></script>
 	<script src="html2canvas.min.js"></script>
-	<script src="html2pdf.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
