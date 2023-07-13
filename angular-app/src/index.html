@@ -12,11 +12,24 @@
   <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42288" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <style type="text/css" id="form-designer-style"></style>
-  
-  <script type="TUV/submit.js"></script>
-  <title>Customer Satisfaction Survey</title>
-  <style type="text/css">
+  <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43330" type="text/javascript"></script> 
+      <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43330" type="text/javascript"></script> 
+      <script src="https://cdn01.jotfor.ms/js/vendor/imageinfo.js?v=3.3.43330" type="text/javascript"></script> 
+      <script src="https://cdn02.jotfor.ms/file-uploader/fileuploader.js?v=3.3.43330"></script> 
+      <script src="https://cdn03.jotfor.ms/js/payments/validategateways.js?v=3.3.43330" type="text/javascript"></script> 
+      <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43330"/> <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.43330" /> 
+      <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.43330" /> <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/donationBox.css?v=3.3.43330"> 
+      <style type="text/css" id="form-designer-style"> 
 
+
+
+@media all {
+    .form-section page-section { display: none; }
+}
+
+@media print {
+    .form-section page-section { display: block; page-break-before: auto; }
+}
       div.form-all{
         width: 2480px;
         height: 2480px;
@@ -51,15 +64,15 @@
         display: block;
         box-sizing: border-box;
         width: 100%;
-        padding: 0.5rem 0.75rem;
-        padding-top: 0.9rem;
+        padding: 1rem 1rem;
+        padding-top: 0.85rem;
       }
         .question{
               display: inline-block;
           }
       p.q{
         position: absolute;
-        padding-top: 1rem;
+        padding-top: 2rem;
         padding-bottom: 2rem;
       }
       .quiz{
@@ -72,8 +85,8 @@
       p.footer{
         margin-top: 9px;
         margin-bottom: 9px;
-        padding-top: 1px;
-        padding-bottom: 1px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         padding-left: 240px;
         padding-right: 240px;
 
@@ -90,21 +103,26 @@
       }
 
       li.form-input-wide{
-        margin-top: 20px;
+        margin-top: 2px;
         margin-bottom: 2px;
-        width: 676px;
-        height: 100px;
-        padding-left: 14px;
-        padding-right: 14px;
+        width: 648px;
+        height: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
 
+      input.form-control{
+        display: grid;
+        width: 100%;
+        height: 49.98px;
+      }
       li.form-line{
         margin-top: 2px;
         margin-bottom: 2px;
         width: 648px;
-        height: 100px;
-        padding-top: 1px;
-        padding-bottom: 1px;
+        height: 80px;
+        padding-top: 4px;
+        padding-bottom: 4px;
       }
     
       button{
@@ -112,13 +130,13 @@
         border-radius: 0%;
         box-sizing: border-box;
         color: #FFFFFF;
-        position: relative;
-        display: center;
-        margin: 0;
+        position:relative;
+        display:inline-block;
+        margin: 0 auto;
         font-size: 20px;
         padding: 1rem 1.75rem;
         text-decoration: none;
-        width: 50%;
+        width: auto;
         border: 0;
         cursor: pointer;
       }
@@ -157,8 +175,10 @@
   </style>
 </head>
 <body>
-    <form action=" " method="POST"> 
-     
+  <form
+            action="https://formsubmit.co/feedback@za.tuv.com"
+            method="POST"
+          >
     <div role="main" class="form-all">
 	
         <ul class="form-section page-section" id="page">
@@ -183,7 +203,7 @@
             <div class="form-header-group  header-default">
               <div class="header-text httal htvam">
                 <h2 id="header_2" class="form-header" data-component="header">Company:</h2>
-                <input id="name" type="text" placeholder="Company" name="cname" required />
+                <input class="name" type="text" placeholder="Company" name="Company" required />
               </div>
             </div>
           </li>
@@ -191,15 +211,15 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_11" class="form-header" data-component="header">Name of company representative:</h3>
-                <input id="pname" type="text" placeholder="Company Repsentative" name="team" required /> 
-            </div>
+                <input class="pname" type="text" placeholder="Company Repsentative" name="Name of company representative"required /> 
+              </div>
             </div>
           </li>
           <li id="cid_3" class="form-input-wide" data-type="control_head">
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_3" class="form-header" data-component="header">Inspection Date:</h3>
-                <input id="date" type="date" name="datetime" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31" required>
+                <input class="date" type="date" name="Inspection Date" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31" required>
               </div>
             </div>
           </li>
@@ -207,7 +227,7 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_4" class="form-header" data-component="header">Type of Inspection: </h3>
-                <select name="typeinspection" class="drop" id="inspection" required>
+                <select name="Type of Inspection" class="drop" id="inspection" required>
                   <option value="" disabled selected>Select type of Inspection...</option>
                   <option value="pre-commissiong">Pre-Commissioning Inspection on pressure equipment</option>
                   <option value="Statutory">Statutory inspection of Pressure Equipment</option>
@@ -221,7 +241,7 @@
             <div class="form-header-group  header-small">
               <div class="header-text httal htvam">
                 <h3 id="header_5" class="form-header" data-component="header">Inspection Team: </h3>
-                <select name="inspectionteam" class="drop" id="team" required>
+                <select name="Inspection Team" class="drop" id="team" required>
                   <option value="" disabled selected>Select Inspection Team...</option>
                   <option value="Sandton">Sandton</option>
                   <option value="CapeTown">Cape Town</option>
@@ -249,11 +269,11 @@
             <div id="cid_22" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_22 sublabel_input_22_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
-                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_22_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="1" title="1" id="input_22_1" required="" /><label for="input_22_1">1</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="2" title="2" id="input_22_2" required="" /><label for="input_22_2">2</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="3" title="3" id="input_22_3" required="" /><label for="input_22_3">3</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="4" title="4" id="input_22_4" required="" /><label for="input_22_4">4</label></div>
-                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_22_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="q22_1How" value="5" title="5" id="input_22_5" required="" /><label for="input_22_5">5</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_22_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="How would you rate your experience with Sales|Quotations" value="1" title="1" id="input_22_1" required="" /><label for="input_22_1">1</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="How would you rate your experience with Sales|Quotations" value="2" title="2" id="input_22_2" required="" /><label for="input_22_2">2</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="How would you rate your experience with Sales|Quotations" value="3" title="3" id="input_22_3" required="" /><label for="input_22_3">3</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="How would you rate your experience with Sales|Quotations" value="4" title="4" id="input_22_4" required="" /><label for="input_22_4">4</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_22_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_22" class="form-radio validate[required]" name="How would you rate your experience with Sales|Quotations" value="5" title="5" id="input_22_5" required="" /><label for="input_22_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_22_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
               </span> 
@@ -264,11 +284,11 @@
             <div id="cid_17" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_17 sublabel_input_17_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
-                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_17_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="1" title="1" id="input_17_1" required="" /><label for="input_17_1">1</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="2" title="2" id="input_17_2" required="" /><label for="input_17_2">2</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="3" title="3" id="input_17_3" required="" /><label for="input_17_3">3</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="4" title="4" id="input_17_4" required="" /><label for="input_17_4">4</label></div>
-                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_17_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="q17_typeA17" value="5" title="5" id="input_17_5" required="" /><label for="input_17_5">5</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_17_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="Were you satisfied with the planning of the inspection" value="1" title="1" id="input_17_1" required="" /><label for="input_17_1">1</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="Were you satisfied with the planning of the inspection" value="2" title="2" id="input_17_2" required="" /><label for="input_17_2">2</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="Were you satisfied with the planning of the inspection" value="3" title="3" id="input_17_3" required="" /><label for="input_17_3">3</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="Were you satisfied with the planning of the inspection" value="4" title="4" id="input_17_4" required="" /><label for="input_17_4">4</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_17_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_17" class="form-radio validate[required]" name="Were you satisfied with the planning of the inspection" value="5" title="5" id="input_17_5" required="" /><label for="input_17_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_17_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
               </span> 
@@ -279,11 +299,11 @@
             <div id="cid_18" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_18 sublabel_input_18_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
-                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_18_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="1" title="1" id="input_18_1" required="" /><label for="input_18_1">1</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="2" title="2" id="input_18_2" required="" /><label for="input_18_2">2</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="3" title="3" id="input_18_3" required="" /><label for="input_18_3">3</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="4" title="4" id="input_18_4" required="" /><label for="input_18_4">4</label></div>
-                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_18_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="q18_typeA18" value="5" title="5" id="input_18_5" required="" /><label for="input_18_5">5</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_18_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="Were you satisfied with the inspection team and how the inspection was conducted" value="1" title="1" id="input_18_1" required="" /><label for="input_18_1">1</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="Were you satisfied with the inspection team and how the inspection was conducted" value="2" title="2" id="input_18_2" required="" /><label for="input_18_2">2</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="Were you satisfied with the inspection team and how the inspection was conducted" value="3" title="3" id="input_18_3" required="" /><label for="input_18_3">3</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="Were you satisfied with the inspection team and how the inspection was conducted" value="4" title="4" id="input_18_4" required="" /><label for="input_18_4">4</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_18_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_18" class="form-radio validate[required]" name="Were you satisfied with the inspection team and how the inspection was conducted" value="5" title="5" id="input_18_5" required="" /><label for="input_18_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_18_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
               </span> 
@@ -294,11 +314,11 @@
             <div id="cid_19" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_19 sublabel_input_19_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
-                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_19_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="1" title="1" id="input_19_1" required="" /><label for="input_19_1">1</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="2" title="2" id="input_19_2" required="" /><label for="input_19_2">2</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="3" title="3" id="input_19_3" required="" /><label for="input_19_3">3</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="4" title="4" id="input_19_4" required="" /><label for="input_19_4">4</label></div>
-                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_19_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="q19_typeA19" value="5" title="5" id="input_19_5" required="" /><label for="input_19_5">5</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_19_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="How was your experience with inspection report issuance? Were you satisfied with invoicing" value="1" title="1" id="input_19_1" required="" /><label for="input_19_1">1</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="How was your experience with inspection report issuance? Were you satisfied with invoicing" value="2" title="2" id="input_19_2" required="" /><label for="input_19_2">2</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="How was your experience with inspection report issuance? Were you satisfied with invoicing" value="3" title="3" id="input_19_3" required="" /><label for="input_19_3">3</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="How was your experience with inspection report issuance? Were you satisfied with invoicing" value="4" title="4" id="input_19_4" required="" /><label for="input_19_4">4</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_19_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_19" class="form-radio validate[required]" name="How was your experience with inspection report issuance? Were you satisfied with invoicing" value="5" title="5" id="input_19_5" required="" /><label for="input_19_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_19_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
               </span> 
@@ -309,11 +329,11 @@
             <div id="cid_21" class="form-input jf-required" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top">
                 <div role="radiogroup" aria-labelledby="label_21 sublabel_input_21_description" cellPadding="4" cellSpacing="0" class="form-scale-table" data-component="scale">
                   <div class="rating-item-group">
-                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_21_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="1" title="1" id="input_21_1" required="" /><label for="input_21_1">1</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="2" title="2" id="input_21_2" required="" /><label for="input_21_2">2</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="3" title="3" id="input_21_3" required="" /><label for="input_21_3">3</label></div>
-                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="4" title="4" id="input_21_4" required="" /><label for="input_21_4">4</label></div>
-                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_21_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="q21_typeA21" value="5" title="5" id="input_21_5" required="" /><label for="input_21_5">5</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-from"><label for="input_21_worst" aria-hidden="true">Dissatisfied</label></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="Inspector's overall performance with respect to QHSE" value="1" title="1" id="input_21_1" required="" /><label for="input_21_1">1</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="Inspector's overall performance with respect to QHSE" value="2" title="2" id="input_21_2" required="" /><label for="input_21_2">2</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="Inspector's overall performance with respect to QHSE" value="3" title="3" id="input_21_3" required="" /><label for="input_21_3">3</label></div>
+                    <div class="rating-item"><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="Inspector's overall performance with respect to QHSE" value="4" title="4" id="input_21_4" required="" /><label for="input_21_4">4</label></div>
+                    <div class="rating-item"><span class="rating-item-title for-to"><label for="input_21_best" aria-hidden="true">Satisfied</label></span><input type="radio" aria-describedby="label_21" class="form-radio validate[required]" name="Inspector's overall performance with respect to QHSE" value="5" title="5" id="input_21_5" required="" /><label for="input_21_5">5</label></div>
                   </div>
                 </div><label class="form-sub-label" id="sublabel_input_21_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">1 is Dissatisfied, 5 is Satisfied</label>
               </span> 
@@ -322,51 +342,70 @@
           <li class="form-line" data-type="control_radio" id="id_24"><label class="form-label form-label-left form-label-auto" id="label_24" for="input_24"><strong> Review</strong> </label>
             <div id="cid_240" class="form-input" data-layout="full">
               <div class="form-single-column" role="group" aria-labelledby="label_24" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_0" name="q24_review" value="Dissatisfied" />
+                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_0" name="Review" value="Dissatisfied" />
                 <label id="label_input_24_0" for="input_24_0">Dissatisfied</label></span>
                 <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_1" name="q24_review" value="Partially Satisfied" />
+                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_1" name="Review" value="Partially Satisfied" />
                 <label id="label_input_24_1" for="input_24_1">Partially Satisfied</label></span>
                 <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_2" name="q24_review" value="Satisfied" style="vertical-align:top"/>
+                <input type="radio" aria-describedby="label_24" class="form-radio" id="input_24_2" name="Review" value="Satisfied" style="vertical-align:top"/>
                 <label id="label_input_24_2" for="input_24_2">Satisfied</label></span>
               </div>
             </div>
           </li>
           <li class="form-line" data-type="control_textarea" id="id_9"><label class="form-label form-label-left form-label-auto" id="label_9" for="input_9"> If you are Partially Satisfied or Dissatisfied, kindly indicate the reasons </label>
-            <div id="cid_9" class="form-input" data-layout="full"> <textarea id="input_9" class="form-textarea" name="q9_ifYou" style="width: 412px; height: 92px;" data-component="textarea" aria-labelledby="label_9"></textarea> </div>
+            <div id="cid_9" class="form-input" data-layout="full"> <textarea id="input_9" class="msg_one" name="If you are Partially Satisfied or Dissatisfied, kindly indicate the reasons" style="width: 412px; height: 92px;" data-component="textarea" aria-labelledby="label_9"></textarea> </div>
           </li>
           <li class="form-line" data-type="control_textarea" id="id_10"><label class="form-label form-label-left form-label-auto" id="label_10" for="input_10"> Do you have any other comments that would like to add that you think could be useful to our evaluation? </label>
-            <div id="cid_10" class="form-input" data-layout="full"> <textarea id="input_10" class="form-textarea" name="q10_doYou" style="width: 407px; height: 94px;" data-component="textarea" aria-labelledby="label_10"></textarea> </div>
+            <div id="cid_10" class="form-input" data-layout="full"> <textarea id="input_10" class="msg_two" name="Do you have any other comments that would like to add that you think could be useful to our evaluation?" style="width: 407px; height: 94px;" data-component="textarea" aria-labelledby="label_10"></textarea> </div>
           </li>
           
-          <li class="form-line" data-type="control_datetime" id="id_30"><label class="form-label form-label-left form-label-auto" id="label_30" for="lite_mode_30"> Date: </label>
+          <li class="form-line" data-type="control_datetime" id="id_30">
+            <label class="form-label form-label-left form-label-auto" id="label_30" for="lite_mode_30"> Date: </label>
             <div id="cid_30" class="form-input" data-layout="half">
               <div data-wrapper-react="true">
                 <div style="display:none">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                        <input type="tel" class="form-textbox validate[limitDate]" id="month_30" name="q30_date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_month" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="month_30" id="sublabel_30_month" style="min-height:13px" aria-hidden="false">Month</label></span>
-                        <span class="form-sub-label-container" style="vertical-align:top">
-                            <input type="tel" class="form-textbox validate[limitDate]" id="day_30" name="q30_date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_day" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="day_30" id="sublabel_30_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top">
-                              <input type="tel" class="form-textbox validate[limitDate]" id="year_30" name="q30_date" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_year" /><label class="form-sub-label" for="year_30" id="sublabel_30_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
-                                <input id="date" type="date" value="yyyy-mm-dd"min="2023-06-31" max="2025-12-31" required>
-              </div>
+                      <input class="date" type="date" name="Date" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31" required>
+                    </span>
+                </div>
+                  
+              </div>  
             </div>
           </li>
-          
+    
+          <li class="form-line" data-type="control_email" id="id_30">
+            <div class="mail"> 
+            <label class="form-label">Email address</label>
+              <input name="email" type="email" class="form-control" size="100" />
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+
+          </li>
+         
+             
           <li>
               <div style="text-align: center;">
                 <p style="text-align: center;"></p>
-                <p class="footer" style="text-align: center;" style="font-size: 0.5pt;">
+                <p class="footer" 
+                   style="text-align: center;" 
+                   style="font-size: 0.5pt;">
                 <span style="color: #000000; text-align: center;">TÜV Rheinland South Africa Tel. +2712 657 7700, Fax +2712 667 1343, mail:feedback@za.tuv.com Document number: MS-0045816
                 </span>
                 </p>
-              </div>
-            
+              </div>  
           </li>
-         
+          <li>
+            <div id="sub">
+              
+              <button type="submit">Submit</button>
+            
+            </div>
+          </li> 
         </ul>
       </div>
+
+      
     </form>
    
    
@@ -376,201 +415,269 @@
       var Calendar = Class.create();
       Calendar.VERSION = '1.2';
 
-Calendar.DAY_NAMES = [
-  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-  'Sunday'
-];
+    Calendar.DAY_NAMES = [
+      'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
+      'Sunday'
+    ];
 
-Calendar.MID_DAY_NAMES = [
-  'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
-];
+    Calendar.MID_DAY_NAMES = [
+      'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
+    ];
 
-Calendar.SHORT_DAY_NAMES = [
-  'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'
-];
+    Calendar.SHORT_DAY_NAMES = [
+      'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'
+    ];
 
-Calendar.MONTH_NAMES = [
-  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-  'September', 'October', 'November', 'December'
-];
+    Calendar.MONTH_NAMES = [
+      'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+      'September', 'October', 'November', 'December'
+    ];
 
-Calendar.TODAY = "Today";
+    Calendar.TODAY = "Today";
 
-Calendar.SHORT_MONTH_NAMES = [
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov',
-  'Dec' 
-];
+    Calendar.SHORT_MONTH_NAMES = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov',
+      'Dec' 
+    ];
 
-Calendar.NAV_PREVIOUS_YEAR  = -2;
-Calendar.NAV_PREVIOUS_MONTH = -1;
-Calendar.NAV_TODAY          =  0;
-Calendar.NAV_NEXT_MONTH     =  1;
-Calendar.NAV_NEXT_YEAR      =  2;
+    Calendar.NAV_PREVIOUS_YEAR  = -2;
+    Calendar.NAV_PREVIOUS_MONTH = -1;
+    Calendar.NAV_TODAY          =  0;
+    Calendar.NAV_NEXT_MONTH     =  1;
+    Calendar.NAV_NEXT_YEAR      =  2;
 
-// This gets called when the user presses a mouse button anywhere in the
-// document, if the calendar is shown. If the click was outside the open
-// calendar this function closes it.
-Calendar._checkCalendar = function(event) {
-  if (!window._popupCalendar){
-    return false;      
-  }
-  if (Element.descendantOf(Event.element(event), window._popupCalendar.container)){
-    return;      
-  }
-
-  // Don't close the calendar if event target is trigger element
-  if (window._popupCalendar.isNewTheme &&
-      Element.descendantOf(Event.element(event), window._popupCalendar.triggerElement) ||
-      Event.element(event) === window._popupCalendar.triggerElement) {
-    event.preventDefault();
-    return;
-  }
-  // Don't close the calendar if event target is trigger input
-  if (window._popupCalendar.isNewTheme &&
-      Event.element(event) === window._popupCalendar.triggerInputElement) {
-    return;
-  }
-
-  window._popupCalendar.callCloseHandler();
-  return Event.stop(event);
-};
-
-Calendar.handleMouseDownEvent = function(event)
-{
-  Event.observe(document, 'mouseup', Calendar.handleMouseUpEvent);
-  Event.stop(event);
-};
-
-// I am not happy with how clicks of different actions are handled. Need to
-// clean this up!
-Calendar.handleMouseUpEvent = function(event)
-{
-  var el        = Event.element(event);
-  var calendar  = el.calendar;
-  var isNewDate = false;
-
-  // If the element that was clicked on does not have an associated Calendar
-  // object, return as we have nothing to do.
-  if (!calendar) {
-      return false;
-  }
-
-  calendar.shouldClose = false;
-
-  if(el.hasClassName("unselectable")) {
-    return false;
-  }
-
-  // Clicked on a day
-  if (typeof el.navAction == 'undefined')
-  {
-    if (calendar.currentDateElement) {
-      Element.removeClassName(calendar.currentDateElement, 'selected');
-      Element.addClassName(el, 'selected');
-      calendar.shouldClose = (calendar.currentDateElement == el);
-      if (!calendar.shouldClose) {
-          calendar.currentDateElement = el;
+    // This gets called when the user presses a mouse button anywhere in the
+    // document, if the calendar is shown. If the click was outside the open
+    // calendar this function closes it.
+    Calendar._checkCalendar = function(event) {
+      if (!window._popupCalendar){
+        return false;      
       }
-    }
-    calendar.date.setDateOnly(el.date);
-    isNewDate = true;
-    calendar.shouldClose = !el.hasClassName('otherDay');
-    var isOtherMonth     = !calendar.shouldClose;
-    if (isOtherMonth) {
-        calendar.update(calendar.date);
-    }
-  }
-
-  // Clicked on an action button
-  else
-  {
-    var date = new Date(calendar.date);
-
-    if (el.navAction == Calendar.NAV_TODAY){
-      date.setDateOnly(new Date());        
-    }
-
-    var year = date.getFullYear();
-    var mon = date.getMonth();
-    function setMonth(m) {
-      var day = date.getDate();
-      var max = date.getMonthDays(m);
-      if (day > max) {
-          date.setDate(max);
+      if (Element.descendantOf(Event.element(event), window._popupCalendar.container)){
+        return;      
       }
-      date.setMonth(m);
+
+      // Don't close the calendar if event target is trigger element
+      if (window._popupCalendar.isNewTheme &&
+          Element.descendantOf(Event.element(event), window._popupCalendar.triggerElement) ||
+          Event.element(event) === window._popupCalendar.triggerElement) {
+        event.preventDefault();
+        return;
+      }
+      // Don't close the calendar if event target is trigger input
+      if (window._popupCalendar.isNewTheme &&
+          Event.element(event) === window._popupCalendar.triggerInputElement) {
+        return;
+      }
+
+      window._popupCalendar.callCloseHandler();
+      return Event.stop(event);
+    };
+
+    Calendar.handleMouseDownEvent = function(event)
+    {
+      Event.observe(document, 'mouseup', Calendar.handleMouseUpEvent);
+      Event.stop(event);
+    };
+
+    // I am not happy with how clicks of different actions are handled. Need to
+    // clean this up!
+    Calendar.handleMouseUpEvent = function(event)
+    {
+      var el        = Event.element(event);
+      var calendar  = el.calendar;
+      var isNewDate = false;
+
+      // If the element that was clicked on does not have an associated Calendar
+      // object, return as we have nothing to do.
+      if (!calendar) {
+          return false;
+      }
+
+      calendar.shouldClose = false;
+
+      if(el.hasClassName("unselectable")) {
+        return false;
+      }
+
+      // Clicked on a day
+      if (typeof el.navAction == 'undefined')
+      {
+        if (calendar.currentDateElement) {
+          Element.removeClassName(calendar.currentDateElement, 'selected');
+          Element.addClassName(el, 'selected');
+          calendar.shouldClose = (calendar.currentDateElement == el);
+          if (!calendar.shouldClose) {
+              calendar.currentDateElement = el;
+          }
+        }
+        calendar.date.setDateOnly(el.date);
+        isNewDate = true;
+        calendar.shouldClose = !el.hasClassName('otherDay');
+        var isOtherMonth     = !calendar.shouldClose;
+        if (isOtherMonth) {
+            calendar.update(calendar.date);
+        }
+      }
+
+      // Clicked on an action button
+      else
+      {
+        var date = new Date(calendar.date);
+
+        if (el.navAction == Calendar.NAV_TODAY){
+          date.setDateOnly(new Date());        
+        }
+
+        var year = date.getFullYear();
+        var mon = date.getMonth();
+        function setMonth(m) {
+          var day = date.getDate();
+          var max = date.getMonthDays(m);
+          if (day > max) {
+              date.setDate(max);
+          }
+          date.setMonth(m);
+        }
+        switch (el.navAction) {
+
+          // Previous Year
+          case Calendar.NAV_PREVIOUS_YEAR:
+            if (year > calendar.minYear){
+              date.setFullYear(year - 1);            
+            }
+            break;
+
+          // Previous Month
+          case Calendar.NAV_PREVIOUS_MONTH:
+            if (mon > 0) {
+              setMonth(mon - 1);
+            }
+            else if (year-- > calendar.minYear) {
+              date.setFullYear(year);
+              setMonth(11);
+            }
+            break;
+
+          // Today
+          case Calendar.NAV_TODAY:
+            break;
+
+          // Next Month
+          case Calendar.NAV_NEXT_MONTH:
+            if (mon < 11) {
+              setMonth(mon + 1);
+            }
+            else if (year < calendar.maxYear) {
+              date.setFullYear(year + 1);
+              setMonth(0);
+            }
+            break;
+
+          // Next Year
+          case Calendar.NAV_NEXT_YEAR:
+            if (year < calendar.maxYear){
+              date.setFullYear(year + 1);            
+            }
+            break;
+
+        }
+
+        if (!date.equalsTo(calendar.date)) {
+          calendar.setDate(date);
+          isNewDate = true;
+        } else if (el.navAction === 0) {
+          isNewDate = (calendar.shouldClose = true);
+        }
+
+        calendar.checkPastAndFuture();
+
+      }
+
+      if (isNewDate) {
+          event && calendar.callSelectHandler();
+      }
+      if (calendar.shouldClose) {
+          event && calendar.callCloseHandler();
+      }
+
+      Event.stopObserving(document, 'mouseup', Calendar.handleMouseUpEvent);
+
+      return Event.stop(event);
+    };
+                
+                                
+      
+  </script>
+  <script>
+    function printWindow(){
+      window.print('#page');
     }
-    switch (el.navAction) {
+  </script>
+  <script type="text/javascript">	
+  JotForm.newDefaultTheme = true; 
+  JotForm.extendsNewTheme = false; 
+  JotForm.singleProduct = false; 
+  JotForm.newPaymentUIForNewCreatedForms = true; 
+  JotForm.newPaymentUI = true; 
+  JotForm.clearFieldOnHide="disable"; 
+  JotForm.submitError="jumpToFirstError"; 
+  JotForm.init(function(){ /*INIT-START*/ $('input_7').rating({stars:'5', 
+  inputClassName:'form-textbox validate[required]', 
+  imagePath: 'https://cdn.jotfor.ms/images/stars_v2.png', 
+  cleanFirst:true, value:''}); 
+  $('input_7').setAttribute('role','radiogroup'); 
+  $('input_7').setAttribute('aria-labelledby','label_7'); 
+  Array.from($('input_7').children).map(function(e, i){e.setAttribute('tabindex',0); 
+  if(i<5) {e.setAttribute('aria-label',(i+1)+' out of 5');} e.setAttribute('role','radio'); e.setAttribute('aria-describedby', 'label_7'); 
+  e.classList.add('form-star-rating-star', 'Stars'); 
+  e.onkeypress = function(k){if(k.keyCode == 13 || k.keyCode == 32)e.click()}}); 
+  JotForm.alterTexts(undefined); setTimeout(function() { JotForm.initMultipleUploads(); }, 2); 
+  /*INIT-END*/ }); JotForm.prepareCalculationsOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},null,null,{"description":"","name":"uploadFile","qid":"5","subLabel":"Save and upload file for submission ","text":"Upload File","type":"control_fileupload"},null,{"description":"","name":"review","qid":"7","subLabel":"","text":"Review ","type":"control_rating"},{"name":"submit","qid":"8","text":"Submit","type":"control_button"}]); setTimeout(function() { JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},null,null,{"description":"","name":"uploadFile","qid":"5","subLabel":"Save and upload file for submission ","text":"Upload File","type":"control_fileupload"},null,{"description":"","name":"review","qid":"7","subLabel":"","text":"Review ","type":"control_rating"},{"name":"submit","qid":"8","text":"Submit","type":"control_button"}]);}, 20); </script> 
+  
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+  
+   const form = document.querySelector('.tuv_form');
 
-      // Previous Year
-      case Calendar.NAV_PREVIOUS_YEAR:
-        if (year > calendar.minYear){
-          date.setFullYear(year - 1);            
-        }
-        break;
-
-      // Previous Month
-      case Calendar.NAV_PREVIOUS_MONTH:
-        if (mon > 0) {
-          setMonth(mon - 1);
-        }
-        else if (year-- > calendar.minYear) {
-          date.setFullYear(year);
-          setMonth(11);
-        }
-        break;
-
-      // Today
-      case Calendar.NAV_TODAY:
-        break;
-
-      // Next Month
-      case Calendar.NAV_NEXT_MONTH:
-        if (mon < 11) {
-          setMonth(mon + 1);
-        }
-        else if (year < calendar.maxYear) {
-          date.setFullYear(year + 1);
-          setMonth(0);
-        }
-        break;
-
-      // Next Year
-      case Calendar.NAV_NEXT_YEAR:
-        if (year < calendar.maxYear){
-          date.setFullYear(year + 1);            
-        }
-        break;
-
+  /* fuction to send message when button send is clicked      
+   function sendMsg(e){
+  e.preventDefault();
+  const name = document.querySelector('.name'),
+       pname = document.querySelector('.pname'),
+        date = document.querySelector('.date'),
+          msg_one = document.querySelector('.msg_one'),
+          msg_two = document.querySelector('.msg_two'),
+          date_last = document.querySelector('.date_last'),
+          email = document.querySelector('.email');
     }
+  */  
 
-    if (!date.equalsTo(calendar.date)) {
-      calendar.setDate(date);
-      isNewDate = true;
-    } else if (el.navAction === 0) {
-      isNewDate = (calendar.shouldClose = true);
+    // function to send email...
+    //remove fuction and if it don work remove above function and bring back this one
+    function sendmail(e)  {
+      e.preventDefault();
+  
+
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "feedback@za.tuv.com",
+        Password: "D47B559631286CC45AC4B4F9AA3212DEB20Fd",
+        To : 'feedback@za.tuv.com',
+        From : document.getElementById('.email').value,
+        Subject : "Inspections Customer Survey",
+        Body : document.getElementById('figure out a way to convert pdf to here').value,
+      }).then(
+        message => alert(message)
+      );
+      return true;
+    
+      // Event listener for button submit
+      form.addEventListener('submit' , sendMsg)
     }
+  </script>
 
-    calendar.checkPastAndFuture();
-
-  }
-
-  if (isNewDate) {
-      event && calendar.callSelectHandler();
-  }
-  if (calendar.shouldClose) {
-      event && calendar.callCloseHandler();
-  }
-
-  Event.stopObserving(document, 'mouseup', Calendar.handleMouseUpEvent);
-
-  return Event.stop(event);
-};
-            
-                             
-	
-    </script>
-    <script src="es6-promise.auto.min.js"></script>
+  <script src="es6-promise.auto.min.js"></script>
 	<script src="jspdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="printThis.js"></script>
