@@ -360,17 +360,17 @@
             <div id="cid_10" class="form-input" data-layout="full"> <textarea id="input_10" class="msg_two" name="Do you have any other comments that would like to add that you think could be useful to our evaluation?" style="width: 407px; height: 94px;" data-component="textarea" aria-labelledby="label_10"></textarea> </div>
           </li>
           
-          <li class="form-line" data-type="control_datetime" id="id_30">
-            <label class="form-label form-label-left form-label-auto" id="label_30" for="lite_mode_30"> Date: </label>
+          <li class="form-line" data-type="control_datetime" id="id_30"><label class="form-label form-label-left form-label-auto" id="label_30" for="lite_mode_30"> Date: </label>
             <div id="cid_30" class="form-input" data-layout="half">
               <div data-wrapper-react="true">
                 <div style="display:none">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                      <input class="date" type="date" name="Date" value="YYYY-MM-DD"min="2023-06-31" max="2025-12-31" required>
-                    </span>
-                </div>
-                  
-              </div>  
+                        <input type="tel" class="form-textbox validate[limitDate]" id="month_30" name="date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_month" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="month_30" id="sublabel_30_month" style="min-height:13px" aria-hidden="false">Month</label></span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="tel" class="form-textbox validate[limitDate]" id="day_30" name="date" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_day" /><span class="date-separate" aria-hidden="true">-</span><label class="form-sub-label" for="day_30" id="sublabel_30_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top">
+                              <input type="tel" class="form-textbox validate[limitDate]" id="year_30" name="date" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_30 sublabel_30_year" /><label class="form-sub-label" for="year_30" id="sublabel_30_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
+                                <input id="date" type="date" value="yyyy-mm-dd"min="2023-06-31" max="2025-12-31" required>
+              </div>
             </div>
           </li>
     
